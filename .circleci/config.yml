@@ -16,6 +16,7 @@ jobs:
       - image: "circleci/node:9.6.1"
     steps:
       - checkout
+      - node/install-npm
       - run: npm test
 
 workflows:
