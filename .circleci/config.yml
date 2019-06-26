@@ -26,3 +26,9 @@ jobs: # a collection of steps
       - heroku/install
       - heroku/deploy-via-git:
           only-branch: master
+
+workflows:
+  heroku_deploy:
+    jobs:
+      - build
+      - deploy
