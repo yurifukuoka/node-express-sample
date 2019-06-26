@@ -17,6 +17,8 @@ jobs:
     steps:
       - checkout
       - node/install-npm
+      - run: ls
+      - run: pwd
       - run: npm test
 
 workflows:
