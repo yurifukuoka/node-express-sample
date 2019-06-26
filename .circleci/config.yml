@@ -1,4 +1,8 @@
 version: 2.1
+
+orbs:
+  heroku: circleci/heroku@1.0.0
+
 jobs: # a collection of steps
   build: # runs not using Workflows must have a `build` job as entry point
     # working_directory: ~/mern-starter
@@ -15,3 +19,10 @@ jobs: # a collection of steps
       - run: # run tests
           name: test
           command: npm test
+  deploy:
+    executor: heroku/default
+    steps:
+      - checkout
+      - heroku/install
+      - heroku/deploy-via-git:
+          only-branch: master
