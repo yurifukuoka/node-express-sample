@@ -8,7 +8,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/user', function (req, res) {
-  res.status(200).json({ name: 'hikaru maruyama' });
+  res.status(200).json({ name: 'Hikaru Maruyama' });
 });
 
 // サーバーを起動する部分
