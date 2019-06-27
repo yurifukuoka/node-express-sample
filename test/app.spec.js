@@ -7,6 +7,6 @@ describe('GET /user', function () {
       .get('/user')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
-      .expect(200, {name: 'hikaru maruyama'}, done);
+      .expect(200, {name: 'yuri fukuoka'}, done);
   });
 });
